@@ -1,38 +1,205 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+.page{
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+.container{
+  height: 555px;
+  border-radius: 25px;
+  width: 700px;
+  border: 10px groove #005DAA;
+  background-color: #ffd000d5;
+}
+.container2{
+  height: 555px;
+  width: 350px;
+  border-radius: 25px;
+  border: 10px groove #005DAA;
+  background-color: #ffd000d5;
+}
+.heading{
+text-align: center;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+margin-top: 1rem;
+font-weight: bold;
+font-size: 75px;
+}
+.answer{
+  display: block;
+  font-weight: bold;
+  color: white;
+  background-color: #005DAA;
+  border-radius: 25px;
+  text-align: center;
+  border: 3px groove white;
+}
+.inputHolder {
+  margin: 15px 0;
+  justify-content: center;
+}
+.mainWrapper {
+  padding: 0 10px;
+}
+.mainContent {
+  display: flex;
+  margin-bottom: 10px;
+}
+.inputHolder {
+  padding: 0 10px;
+  display: flex;
+}
+.inputHolder input[type='text'] {
+  max-width: 400px;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 0;
+  display: inline-block;
+  border: 1px solid #222;
+  outline: none;
+  justify-content: center;
+}
+.uploadInput {
+  width: 0px;
+  height: 0px;
+  text-align: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+.or {
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-flex;
+  padding: 0 20px;
+}
+.uploadImage {
+  padding: 8px 16px;
+  font-size: 18px;
+  background: #333;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.button {
+  padding: 12px 17px;
+  justify-content: center;
+  font-size: 18px;
+  background: #005DAA;
+  border: 3px groove white;
+  color: #fff;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  outline: none;
+}
+.imageHolder {
+  padding: 0px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border: 5px solid black;
+  object-fit: fill;
+  margin-top: 1rem;
+}
+@media (max-width: 800px) {
+  .imageHolder {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+ }
+}
+.imageHolder:empty {
+  display: none;
+}
+.imageHolder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.resultsHolder {
+  padding: 30px;
+}
+@media (max-width: 800px) {
+  .resultsHolder {
+      width: 100%;
+      padding: 0;
+ }
+}
+.resultsHolder .result {
+  border: 1px solid #333;
+  background-color: white;
+  margin: 0 0 10px;
+  padding: 10px;
+}
+.resultsHolder .result:first-of-type {
+  border-color: #333;
+  background-color: #333;
+}
+.resultsHolder .result:first-of-type .name {
+  color: #fff;
+}
+.resultsHolder .result:first-of-type .confidence {
+  color: #dfdfdf;
+}
+.resultsHolder .result .name {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.resultsHolder .result .confidence {
+  display: block;
+  font-weight: 300;
+}
+.resultsHolder .result .confidence .bestGuess {
+  background-color: #ffd000d5;
+  padding: 2px 6px;
+  color: black;
+  margin-left: 3px;
+}
+.identify{
+  margin: auto;
+  padding: 3px;
+  display: inline-block;
+  justify-content: center;
+  border: 3px;
+}
+.recentPredictions {
+  margin: 40px 0 0;
+  background: #ffd000d5;
+  border-radius: 25px;
+  border: 10px groove #005DAA;
+  padding: 10px;
+  width: 230px;
+}
+.recentPredictions h2 {
+  color: #111;
+  font-size: 26px;
+  margin: 10px 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.recentPredictions .recentImages {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
-
-.App-link {
-  color: #61dafb;
+.recentPredictions .recentPrediction {
+  flex: 0 0 20%;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recentPredictions .recentPrediction img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  object-fit: contain;
 }
