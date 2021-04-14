@@ -7,7 +7,6 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import * as mobilenet from "@tensorflow-models/mobilenet";
 import "./App.css";
-import { arrayBufferToBase64String } from "@tensorflow/tfjs-core/dist/io/io_utils";
 
 function App() {
   /* Declaring Model Constants */
