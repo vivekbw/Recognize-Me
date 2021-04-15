@@ -128,7 +128,7 @@ font-size: 75px;
   object-fit: cover;
 }
 .resultsHolder {
-  padding: 30px;
+  padding: 25px;
 }
 @media (max-width: 800px) {
   .resultsHolder {
