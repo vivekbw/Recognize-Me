@@ -5,6 +5,7 @@
 */
 import React from "react";
 import { useState, useEffect, useRef } from "react";
+/* This is the Tensorflow JS Model Used for Image Classification */ 
 import * as mobilenet from "@tensorflow-models/mobilenet";
 import "./App.css";
 
@@ -49,7 +50,7 @@ function App() {
     }
   };
 
-  /* Event function for Image Identification */
+  /* Identify function for Image Identification */
   const identify = async () => {
     textInputRef.current.value = "";
     const results = await model.classify(imageRef.current);
@@ -82,6 +83,7 @@ function App() {
     return <h2>Loading Please Wait...</h2>;
   }
 
+  /* Individual Lists for Each Meal Type that are compiled via the Mobilenet TFJS Model */
   var appetizers = [
     "bagel, beigel",
     "guacamole",
@@ -109,13 +111,16 @@ function App() {
     "chocolate sauce, chocolate syrup",
   ];
 
-  /* Image Upload */
-  /* Image can be uploaded via URL or through source */
+  /*
+  Images can be uploaded via URL or through storage
+  
+  */
   return (
     <div className="page">
       <div className="container">
         <h1 className="heading">FOOD IDENTIFIER</h1>
         <div className="inputHolder">
+          {/* Image Input Via Device Source */}
           <input
             type="file"
             accept="image/*"
@@ -128,18 +133,21 @@ function App() {
             Upload Image
           </button>
           <span className="or">OR</span>
+          {/* Image Input Via Image URL */}
           <input
             type="text"
             placeholder="Paste Image URL"
             ref={textInputRef}
             onChange={handleOnChange}
           />
+          {/* Identify Image Button - Triggers "identify" function and the TFJS model */}
           {imageURL && (
             <button className="button" onClick={identify}>
               Identify Image
             </button>
           )}
         </div>
+        {/* Image Preview - Adjusts based on other content on the application */}
         <div className="mainWrapper">
           <div className="mainContent">
             <div className="imageHolder">
@@ -152,16 +160,19 @@ function App() {
                 />
               )}
             </div>
+            {/* Holds the Results from the Identify Function */}
             {results.length > 0 && (
               <div className="resultsHolder">
                 {results.map((result, index) => {
                   return (
                     <div className="result" key={result.className}>
                       <span className="name">{result.className}</span>
+                      {/* Confidence Level - Measures the accuracy of the prediction */}
                       <span className="confidence">
                         Confidence level:{" "}
                         {(result.probability * 100).toFixed(2)}%{" "}
                       </span>
+                      {/* Decides which category the food falls into */}
                       {index === 0 && appetizers.includes(result.className) && (
                         <span className="answer">Appetizer</span>
                       )}
@@ -179,6 +190,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/* Recent Images Feature */}
       {history.length > 0 && (
         <div className="recentPredictions">
           <h2>RECENT IMAGES</h2>
@@ -186,6 +198,7 @@ function App() {
             {history.slice(0, 6).map((image, index) => {
               return (
                 <div className="recentPrediction" key={`${image}${index}`}>
+                  {/* If Image is selected, ImageURL is set to the appropriate value */}
                   <img
                     src={image}
                     alt="Recent Prediction"
