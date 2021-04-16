@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 /Scripts
-/pyven.cfg
+/pyvenv.cfg
 /yarn.lock
 /yarn-error.log
 /netlify.toml
