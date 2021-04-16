@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 /Scripts
+/pyven.cfg
+/yarn.lock
+/yarn-error.log
+/netlify.toml
 
 # testing
 /coverage
