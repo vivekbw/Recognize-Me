@@ -3,13 +3,17 @@
   Using TFJS and React to build a Food Classification Application
   April 12, 2021
 */
-import React from "react";
+
+import React, { Component } from "react";
 import { useState, useEffect, useRef } from "react";
-/* This is the Tensorflow JS Model Used for Image Classification */ 
-import * as mobilenet from "@tensorflow-models/mobilenet";
+import * as mobilenet from "@tensorflow-models/mobilenet"; // This is the Tensorflow JS Model Used for Image Classification
 import "./App.css";
 
 function App() {
+  /* API Credentials */
+  const APP_ID = "8ebe31e7";
+  const APP_KEY = "e5600a9da65cfab13ac82f9b2c46bbf1";
+
   /* Declaring Model Constants */
   const [isModelLoading, setIsModelLoading] = useState(false);
   const [model, setModel] = useState(null);
@@ -68,10 +72,12 @@ function App() {
     fileInputRef.current.click();
   };
 
+  /* Loads the Machine Learning Model*/
   useEffect(() => {
     loadModel();
   }, []);
 
+  /* When a recent image is selected, a new imageURL is assigned */
   useEffect(() => {
     if (imageURL) {
       setHistory([imageURL, ...history]);
@@ -83,9 +89,9 @@ function App() {
     return <h2>Loading Please Wait...</h2>;
   }
 
-  /* Individual Lists for Each Meal Type that are compiled via the Mobilenet TFJS Model */
+  /* Individual Lists for Each Meal Type compiled via the Mobilenet TFJS Model */
   var appetizers = [
-    "bagel, beigel",
+    "bagel, beigel", 
     "guacamole",
     "soup bowl",
     "French loaf",
@@ -111,10 +117,15 @@ function App() {
     "chocolate sauce, chocolate syrup",
   ];
 
-  /*
-  Images can be uploaded via URL or through storage
-  
-  */
+  /* API Fetch Request to get calorieDensity (Kcal/lb)*/
+  async function getData(foodName) {
+    const foodNameURI = encodeURIComponent(foodName.trim());
+    const response = await fetch(
+      `https://api.edamam.com/api/food-database/v2/parser?nutrition-type=logging&ingr=${foodNameURI}&app_id=${APP_ID}&app_key=${APP_KEY}`
+    );
+    const data = await response.json();
+    console.log(data.hints)
+  }
   return (
     <div className="page">
       <div className="container">

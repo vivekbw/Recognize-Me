@@ -9,6 +9,8 @@
 /yarn.lock
 /yarn-error.log
 /netlify.toml
+/src/reportWebVitals.js
+/src/setupTests.js
 
 # testing
 /coverage
