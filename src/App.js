@@ -11,8 +11,8 @@ import "./App.css";
 
 function App() {
   /* API Credentials */
-  const APP_ID = "8ebe31e7";
-  const APP_KEY = "e5600a9da65cfab13ac82f9b2c46bbf1";
+  const APP_ID = "[YOUR_APP_ID";
+  const APP_KEY = "[YOUR_APP_KEY]";
 
   /* Declaring Model Constants */
   const [isModelLoading, setIsModelLoading] = useState(false);
