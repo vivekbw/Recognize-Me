@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
   /* API Credentials */
-  const APP_ID = "[YOUR_APP_ID";
+  const APP_ID = "[YOUR_APP_ID]";
   const APP_KEY = "[YOUR_APP_KEY]";
 
   /* Declaring Model Constants */
