@@ -2,7 +2,7 @@
 
 This is my submission for the RBC Innovation Developer technical task.
 
-* **Objectives:**
+**Objectives:**
 * Identify objects using the Tensorflow JS Model.
 * If the object is a food, identify the food as other an appetizer, main course, or desert.
 * Include recent images feature to allow for quick upload of past images.
