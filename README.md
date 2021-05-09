@@ -1,3 +1,13 @@
+# FoodApp
+
+This is my submission for the RBC Innovation Developer technical task.
+
+* **Objectives:**
+* Identify objects using the Tensorflow JS Model.
+* If the object is a food, identify the food as other an appetizer, main course, or desert.
+* Include recent images feature to allow for quick upload of past images.
+* Use Edamam Food API to gather calorie per serving data and determine food type.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
