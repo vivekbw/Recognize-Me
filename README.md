@@ -11,7 +11,7 @@ This is my submission for the RBC Innovation Developer technical task.
 ## Application Demo
 
 <p align="center">
-  <img width="460" height="300" src="https://media.giphy.com/media/c0FfB3OCPHq5sWVlE0/giphy.gif">
+  <img width="460" height="300" src="https://media.giphy.com/media/xyQNHm1PrUliSFGMuL/giphy.gif">
 </p>
 
 ## Available Scripts
