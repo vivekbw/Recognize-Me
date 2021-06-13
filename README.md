@@ -9,7 +9,7 @@ This is my submission for the RBC Innovation Developer technical task.
 * Include recent images feature to allow for quick upload of past images.
 
 <p align="center">
-  ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+  <img width="460" height="300" src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif">
 </p>
 # Getting Started with Create React App
 
