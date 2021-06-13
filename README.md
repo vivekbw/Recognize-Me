@@ -13,9 +13,6 @@ This is my submission for the RBC Innovation Developer technical task.
 <p align="center">
   <img width="460" height="300" src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif">
 </p>
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
