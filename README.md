@@ -8,8 +8,9 @@ This is my submission for the RBC Innovation Developer technical task.
 * If the object is a food, identify the food as other an appetizer, main course, or desert.
 * Include recent images feature to allow for quick upload of past images.
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-
+<p align="center">
+  ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+</p>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
