@@ -5,7 +5,7 @@ This is my submission for the RBC Innovation Developer technical task.
 **Objectives:**
 * Identify objects using the Mobilenet Tensorflow JS Model.
 * Use Edamam Food API to gather calorie per serving data and determine food type.
-* If the object is a food, identify the food as other an appetizer, main course, or desert.
+* If the object is a food, identify the food as either an appetizer, main course, or desert.
 * Include recent images feature to allow for quick upload of past images.
 
 ## Application Demo
