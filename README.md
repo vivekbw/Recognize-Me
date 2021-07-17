@@ -1,7 +1,5 @@
 # FoodApp
 
-This is my submission for the RBC Innovation Developer technical task.
-
 **Objectives:**
 * Identify objects using the Mobilenet Tensorflow JS Model.
 * Use Edamam Food API to gather calorie per serving data and determine food type.
