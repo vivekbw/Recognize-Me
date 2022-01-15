@@ -1,5 +1,7 @@
 # FoodApp
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3635a421-1aa6-49fc-97b5-0943dd378d5b/deploy-status)](https://app.netlify.com/sites/vivekfoodapp/deploys)
+
 **Objectives:**
 * Identify objects using the Mobilenet Tensorflow JS Model.
 * Use Edamam Food API to gather calorie per serving data and determine food type.
